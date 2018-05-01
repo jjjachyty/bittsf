@@ -145,7 +145,7 @@
       </v-flex>
     </v-layout>
     <br>
-    <v-card class="text-xs-center">
+    <!-- <v-card class="text-xs-center">
        <span class="subheading blue--text"> 当前汇率 1USD  = 6.29 CNY</span>   
     </v-card>
  
@@ -185,7 +185,7 @@
          </v-layout>
        </v-card-text>
 
-    </v-card>
+    </v-card> -->
   </v-container>
 
 </template>
@@ -218,15 +218,15 @@ export default {
           schedule.scheduleJob('/10 * * * * *', function(){  
               that.$store.dispatch('getBTCPrice')
             });
-          schedule.scheduleJob('5 * * * * *', function(){  
-               that.$store.dispatch('getOkexUSDT')
-            });
+          // schedule.scheduleJob('5 * * * * *', function(){  
+          //      that.$store.dispatch('getOkexUSDT')
+          //   });
            
         }
   },
     created () {
       this.$store.dispatch('getBTCPrice')
-      this.$store.dispatch('getOkexUSDT')
+      // this.$store.dispatch('getOkexUSDT')
      
   },
   mounted(){
